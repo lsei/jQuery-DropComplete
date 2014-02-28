@@ -1,0 +1,96 @@
+.form-element {
+	position: relative;
+	width: 170px;
+	margin-bottom: 1em;
+}
+
+input[type=text] {
+	height: 30px;
+	/* box-sizing: border-box; */	
+	font-size: 12px;
+	border: 2px solid #ccc;
+	outline: none;
+	padding: 10px;
+	display: inline-block;
+	font-family: "futura";
+	margin:0;
+	z-index: 10;
+	width: 100%;
+	
+	-webkit-transition-property: border-color;
+	-moz-transition-property: border-color;
+	-o-transition-property: border-color;
+	transition-property: border-color;
+
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+input[type=text].invalid {
+	border-color: #f00;
+}
+input[type=text].valid {
+	border-color: #0f0;
+}
+input[type=text].validating {
+	border-color: #ff0;
+}
+
+.trigger-dropdown {
+	position: absolute;
+	top:2px;
+	right: 10px;
+	font-family: "futura";
+	font-size: 12px;
+	line-height: 28px;
+	height: 24px;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.btn-add {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	height: 30px;
+	width: 30px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 24px;
+	border: 2px solid #999;
+	box-sizing: border-box;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.dropcomplete_dropdown {
+	position: absolute;
+	top: 35px;
+	left: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border: 2px solid #ccc;
+	box-sizing: border-box;
+	font-family: "futura";
+	font-size: 12px;
+	background-color: rgba(255,255,255,0.8);
+	z-index: 50;
+	display: none;
+}
+.form-element.showDropdown .dropcomplete_dropdown {
+	display: block;
+}
+.dropdownItem {
+	display: block;
+	padding: 5px 5px 5px 10px;
+	cursor: pointer;
+}
+.dropdownItem:hover {
+	background-color: rgba(240,240,240,0.8);
+}
+.dropdownItem.selected, .dropdownItem.selected:hover {
+	background-color: rgba(220,220,220,0.8);
+}
